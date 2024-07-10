@@ -1,6 +1,7 @@
 import React from 'react';
 import { redirect, useLoaderData, useRouteLoaderData } from 'react-router-dom';
 import EventItem from '../components/EventItem';
+import { EVENT_URL } from '../config/host-config';
 
 const EventDetail = () => {
   // 사용범위가 본인컴포넌트와 그 하위 컴포넌트(children은 하위가 아님)
@@ -22,7 +23,7 @@ export const loader = async ({ params }) => {
   // const { eventId: id } = useParams();
   // const [ev, setEv] = useState({});
 
-  const response = await fetch(`http://localhost:8282/events/${id}`);
+  const response = await fetch(`${EVENT_URL}/${id}`);
 
   if (!response.ok) {
     // ... 예외처리
@@ -36,7 +37,7 @@ export const loader = async ({ params }) => {
 // 실제로 버튼이 있는 곳(EventItem.js)으로 이동
 export const action = async ({ params }) => {
 
-  const response = await fetch(`http://localhost:8282/events/${params.eventId}`, {
+  const response = await fetch(`${EVENT_URL}/${params.eventId}`, {
     method: 'DELETE',
   });
 

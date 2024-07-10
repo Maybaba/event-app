@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import EventList from '../components/EventList';
 import EventSkeleton from '../components/EventSkeleton';
+import { EVENT_URL } from '../config/host-config';
 
 // npm install loadsh
 import { debounce, throttle } from 'lodash';
@@ -42,7 +43,7 @@ const Events = () => {
     console.log('start loading...');
     setLoading(true);
 
-    const response = await fetch(`http://localhost:8282/events/page/${currentPage}?sort=date`);
+    const response = await fetch(`${EVENT_URL}/page/${currentPage}?sort=date`);
     const { events: loadedEvents, totalCount } = await response.json();
 
     console.log('loaded: ', { loadedEvents, totalCount, len: loadedEvents.length });

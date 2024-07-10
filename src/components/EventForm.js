@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './EventForm.module.scss';
 import { useNavigate, Form, redirect } from 'react-router-dom';
+import { EVENT_URL } from '../config/host-config';
 
 const EventForm = ({ method, event = {} }) => {
   const {
@@ -160,7 +161,7 @@ export const action = async ({ request, params }) => {
 
   // console.log(payload);
 
-  let url = `http://localhost:8282/events`;
+  let url = EVENT_URL;
   if (request.method === 'PATCH') {
     url += `/${params.eventId}`;
   }
