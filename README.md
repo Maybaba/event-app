@@ -68,3 +68,80 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# 리액트 프로젝트 시작하기
+
+1. nodejs 설치
+2. create-react-app 설치 (최초1번)
+
+```
+$ npm install -g create-react-app
+```
+
+3. react프로젝트 생성
+
+```
+$ npx create-react-app 프로젝트이름
+```
+
+4. react 프로젝트 실행
+
+```
+$ cd 프로젝트폴더
+$ npm start
+```
+
+- http://localhost:3000 에서 프론트엔드 서버 자동 실행
+
+5. 클론 받은 경우 
+```angular2html
+npm install 
+```
+- 노드 모듈 라이브러리 루트 설치 후 개발
+
+- 노드 모듈 라이브러리 루트 설치 후 개발
+
+6. npm calendar install
+```angular2html
+npm install react-big-calendar moment
+```
+- EEXIST 에러 발생 시 캐시 삭제 후 재설치
+```angular2html
+npm cache clean --force
+
+rm -rf node_modules package-lock.json
+
+npm install
+
+npm install react-big-calendar
+
+npm install moment
+```
+
+7. react modal install
+```angular2html
+ npm install react-modal
+```
+
+8. react boot strap install
+```angular2html
+npm install react-bootstrap bootstrap gti
+```
+
+9. styled components install
+```angular2html
+npm install --save styled-components 
+//작업하는 폴더 경로에 설치한다. 
+
+import styled from 'styled-components';
+```
+
+10. bootstrap, reactstrap, sass(css ext ver library), reactIcons install
+```angular2html
+npm install bootstrap reactstrap sass react-icon
+```
+
+11. ROUTER install
+```angular2html
+npm install react-router-dom
+```
