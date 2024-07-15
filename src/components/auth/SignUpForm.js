@@ -19,6 +19,7 @@ const SignUpForm = () => {
 
   // 입력된 이메일
   const [enteredEmail, setEnteredEmail] = useState('');
+  
   // 입력된 패스워드
   const [enteredPassword, setEnteredPassword] = useState('');
   const [passwordIsVaild, setPasswordIsValid] = useState(false);
