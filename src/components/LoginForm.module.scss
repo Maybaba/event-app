@@ -17,7 +17,6 @@
     padding: 0.25rem;
   }
 }
-
 .actions {
   display: flex;
   gap: 1rem;
@@ -50,3 +49,9 @@
     }
   }
 }
+
+.error {
+  color: rgb(225, 45, 45);
+}
+
+
