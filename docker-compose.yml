@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  react-app:
+    build: .
+    ports:
+      - "3000:3000" # local에서 실행할 때 : 다른 서버에서 접근할 때
+    environment:
+      - NODE_ENV=development

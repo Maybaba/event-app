@@ -14,7 +14,7 @@ const EventProvider = () => {
       changeTotalEventCount: (count) => setTotalEventCount(count),
     }}
     >
-      {children}
+      {/*{children}*/}
     </EventContext.Provider>
   );
 };
